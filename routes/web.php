@@ -12,7 +12,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPaymentController;
 
 Route::get('/', function () {
-    return view('admin.dashboard');
+    return view('login.login');
 });
 
 Route::get('/dashboard', function () {
