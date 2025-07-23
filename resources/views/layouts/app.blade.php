@@ -89,6 +89,16 @@
                 </a>
             </li>
 
+           <li class="nav-item">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="nav-link" style="background:none; border:none;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </button>
+            </form>
+        </li>
+
 
             {{-- <li class="nav-item">
                 <a href="">Payment</a>
@@ -114,7 +124,7 @@
     </div>
     <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
+    <!-- Scroll to Top a-->
     {{-- <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a> --}}

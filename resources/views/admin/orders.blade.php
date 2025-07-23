@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="container text-white">
-    <h2 class="mt-5">All Orders</h2>
+    <a class="text-white text-decoration-none" href="{{ route('orders.index') }}">
+        <h2 class="mt-5">All Orders</h2>
+    </a>
 
     <div class="mb-3">
     <a href="{{ route('orders.downloadPdf') }}" class="btn btn-dark">

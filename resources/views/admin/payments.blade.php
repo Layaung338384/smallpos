@@ -51,7 +51,9 @@
 
 @section('content')
 <div class="container my-5">
-    <h2 class="text-white">Admin Payments</h2>
+    <a href="{{ route('payments.index') }}" class="text-white text-decoration-none">
+        <h2 class="text-white">Admin Payments</h2>
+    </a>
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('login.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+// })->middleware(['auth', 'verified'])->name('adminDashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -25,7 +25,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('admin/main/dashboard',[AdminController::class,'indexx'])->name('adminDashboard');
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('admin/main/dashboard',[AdminController::class,'indexx'])->name('adminDashboard');
 
 //pdf download
 Route::get('/admin/orders/download-pdf', [OrderController::class, 'downloadPdf'])->name('orders.downloadPdf');
@@ -59,6 +60,10 @@ Route::post('/order', [OrderController::class, 'store'])->name('orders.store');
 // Admin order list
 Route::get('/admin/orders', [OrderController::class, 'index'])->name('orders.index');
 Route::delete('/admin/orders/{id}', [OrderController::class, 'destroy'])->name('orders.destroy');
+
+});
+
+
 
 
 

@@ -6,7 +6,9 @@
     {{-- 🟩 Form inside card --}}
     <div style="background-color: #584d4d67; border: none;" class="card shadow-lg rounded text-white mb-5">
         <div class="card-body p-5">
-            <h2 class="mb-4 text-center">Manage Products</h2>
+            <a href="{{ route('products.index') }}" class="text-white text-decoration-none">
+                <h2 class="mb-4 text-center">Manage Products</h2>
+            </a>
 
             @if(session('success'))
                 <div class="alert alert-success text-dark">{{ session('success') }}</div>

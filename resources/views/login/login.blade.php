@@ -22,7 +22,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="" style="background: #503C3C">
 
     <div class="container">
 
@@ -34,7 +34,7 @@
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
-                        <div class="row">
+                        <div class="rowd d-flex justify-content-center align-items-center">
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -51,13 +51,8 @@
                                             <input type="password" name="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password" required>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck" name="remember">
-                                                <label class="custom-control-label" for="customCheck">Remember Me</label>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+
+                                        <button type="submit" class="btn btn-dark btn-user btn-block">
                                             Login
                                         </button>
                                     </form>
